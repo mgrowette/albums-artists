@@ -36,7 +36,7 @@ When this is created, a successfully-created album will result in a `201 - Creat
     "ok": true,
     "id": "album_send-away-the-tigers",
     "rev": "1-lkik645shfa893258235hadf"
- } 
+ }
 ```
 
 
@@ -73,16 +73,16 @@ Delete an album from the collection of albums via `DELETE` to the `/albums/:id` 
     "rev": "1-aldk645shfa893258235hadf"
  }   
  ```
- 
- ## Update an Album
+
+## Update an Album
  Updates an album within the collection of albums in the database via a `PUT` to the `/albums/:id` route.  Provide a representation of an album in the request body.
- 
+
  > Tip: Be sure to provide the most recent `_rev` value in the request body.  Otherwise, you will receive a `409 - Conflict` error.
- 
+
   In the request body, all properties are required: `_id`, `_rev`, `name`, `genre`, `year`, and `artistId`.
  ```
  PUT /albums/album_send-away-the-tigers
- 
+
  {
   "_id": "album_send-away-the-tigers",
   "_rev": "1-aldk645shfa893258235hadf",
@@ -100,11 +100,11 @@ Delete an album from the collection of albums via `DELETE` to the `/albums/:id` 
     "ok": true,
     "id": "album_send-away-the-tigers",
     "rev": "2-aldk645shfa893258235hadf"
- } 
+ }
 ```
- 
- 
- ## Artists
+
+
+## Artists
 
 ## Create an Artist
 Create an artist via `POST` to the `/artists` route passing in an album JSON object in the request body.  The `name`, `country`, `founded`, and `description`.
@@ -126,7 +126,7 @@ When this is created, a successfully-created artist will result in a `201 - Crea
     "ok": true,
     "id": "artist_manic-street-preachers",
     "rev": "1-lkik645shfa893258235hadf"
- } 
+ }
 ```
 
 ## Get an Artist
@@ -148,8 +148,8 @@ When this is called, a successfully-found artist will result in a `200 - OK` sta
 }
 ```
 
- ## Delete an Artist
- Delete an artist from the collection of artists via `DELETE` to the `/artists/:id` path.
+## Delete an Artist
+Delete an artist from the collection of artists via `DELETE` to the `/artists/:id` path.
 ```
  DELETE /artists/artists_manic-street-preachers
  ```
@@ -159,18 +159,18 @@ When this is called, a successfully-found artist will result in a `200 - OK` sta
     "ok": true,
     "id": "artist_manic-street-preachers",
     "rev": "1-lkik645shfa893258235hadf"
- } 
+ }
  ```
 
 ## Update an Artist
- Updates an artist within the collection of artists in the database via a `PUT` to the `/artists/:id` route.  Provide a representation of an artist in the request body.
- 
+Updates an artist within the collection of artists in the database via a `PUT` to the `/artists/:id` route.  Provide a representation of an artist in the request body.
+
  > Tip: Be sure to provide the most recent `_rev` value in the request body.  Otherwise, you will receive a `409 - Conflict` error.
- 
-  In the request body, all properties are required: `_id`, `_rev`, `name`, `country`, `founded`, and `description`.
+
+ In the request body, all properties are required: `_id`, `_rev`, `name`, `country`, `founded`, and `description`.
  ```
  PUT /artists/artist_manic-street-preachers
- 
+
 {
   "_id": "artist_manic-street-preachers",
   "_rev": "2-lkik645shfa893258235hadf",
@@ -188,5 +188,5 @@ When this is called, a successfully-found artist will result in a `200 - OK` sta
     "ok": true,
     "id": "artist_manic-street-preachers",
     "rev": "2-lkik645shfa893258235hadf"
- } 
+ }
 ```
