@@ -87,7 +87,7 @@ Delete an album from the collection of albums via `DELETE` to the `/albums/:id` 
  
  {
   "_id": "album_send-away-the-tigers",
-  "_rev": "2-aldk645shfa893258235hadf",
+  "_rev": "1-aldk645shfa893258235hadf",
   "name": "Send Away the Tigers",
   "genre": "rock",
   "year": "2008",
@@ -97,6 +97,13 @@ Delete an album from the collection of albums via `DELETE` to the `/albums/:id` 
  ```
  When this is called, a successfully-updated item will result in a `200 - OK` response and the updated album will be returned in the response body.  A `type` property and an updated `_rev` will be added once the update is returned.
 
+```
+ {
+    "ok": true,
+    "id": "album_send-away-the-tigers",
+    "rev": "2-aldk645shfa893258235hadf"
+ } 
+```
  
  
  ## Artists
@@ -180,3 +187,11 @@ When this is called, a successfully-found item will result in a `200 - OK` respo
 }
  ```
  When this is called, a successfully-updated item will result in a `200 - OK` response and the updated artist will be returned in the response body.  A `type` property and an updated `_rev` will be added once the update is returned.
+
+```
+ {
+    "ok": true,
+    "id": "artist_manic-street-preachers",
+    "rev": "2-lkik645shfa893258235hadf"
+ } 
+```
