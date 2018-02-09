@@ -1,1 +1,1 @@
-# albums-artists
+# Music API
