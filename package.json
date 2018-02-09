@@ -1,10 +1,12 @@
 {
   "name": "albums-artists-api",
   "version": "1.0.0",
-  "description": "The Music API is a RESTful API utilizing JSON with information on certain albums and the artists that created them.  There will be another piece of documentation that gives information on the artists themselves.  There will be [`/artists`](#artists) and [`/albums`](#albums) endpoints",
+  "description":
+    "The Music API is a RESTful API utilizing JSON with information on certain albums and the artists that created them.  There will be another piece of documentation that gives information on the artists themselves.  There will be [`/artists`](#artists) and [`/albums`](#albums) endpoints",
   "main": "api.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node api.js"
   },
   "repository": {
     "type": "git",
