@@ -22,9 +22,9 @@ POST /albums
 
 {
   "name": "Send Away the Tigers",
-  "genre": "Rock",
+  "genre": "rock",
   "year": "2007",
-  "artistId": "artist_Manic-Street-Preachers",
+  "artistId": "artist_manic-street-preachers",
   "type": "album"
 }
 ```
@@ -33,9 +33,9 @@ When this is created, a successfully-created album will result in a `201 - Creat
   "_id": "album_send-away-the-tigers",
   "_rev": "1-aldk645shfa893258235hadf",
   "name": "Send Away the Tigers",
-  "genre": "Rock",
+  "genre": "rock",
   "year": "2007",
-  "artistId": "artist_Manic-Street-Preachers",
+  "artistId": "artist_manic-street-preachers",
   "type": "album"
 ```
 
