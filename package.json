@@ -1,0 +1,31 @@
+{
+  "name": "albums-artists-api",
+  "version": "1.0.0",
+  "description": "The Music API is a RESTful API utilizing JSON with information on certain albums and the artists that created them.  There will be another piece of documentation that gives information on the artists themselves.  There will be [`/artists`](#artists) and [`/albums`](#albums) endpoints",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/migrow/albums-artists.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/migrow/albums-artists/issues"
+  },
+  "homepage": "https://github.com/migrow/albums-artists#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dotenv": "^5.0.0",
+    "express": "^4.16.2",
+    "node-http-error": "^2.0.0",
+    "pouchdb-adapter-http": "^6.4.3",
+    "pouchdb-core": "^6.4.3",
+    "pouchdb-find": "^6.4.3",
+    "ramda": "^0.25.0",
+    "slugify": "^1.2.9"
+  }
+}
