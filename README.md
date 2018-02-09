@@ -30,7 +30,7 @@ POST /albums
   "type": "album"
 }
 ```
-When this is created, a successfully-created album will result in a `201 - Created` response and the album will be returned in the response body.  The response body will include `id` and `rev` properties:
+When this is created, a successfully-created album will result in a `201 - Created` status.  The response body will include `id`, `rev`, and `ok` properties:
 ```
  {
     "ok": true,
@@ -46,7 +46,7 @@ Get an album via `GET` from the `/albums/:id` route, passing in the ID.
 ```
 GET /albums/album_send-away-the-tigers
 ```
-When this is called, a successfully-found item will result in a `200 - OK` response and the album will be returned in the response body.  The response body will include the `_id` and `_rev` properties.
+When this is called, a successfully-found album will result in a `200 - OK` status and the album will be returned in the response body.  The response body will include the `_id` and `_rev` properties.
 
 ```
 {
@@ -65,7 +65,7 @@ Delete an album from the collection of albums via `DELETE` to the `/albums/:id` 
 ```
  DELETE /albums/album_send-away-the-tigers
  ```
- When this is called, a successfully-deleted item will result in a `200 - OK` response. The response body will contain a JSON object with properties `ok`, `id`, and `rev`.
+ When this is called, a successfully-deleted album will result in a `200 - OK` status. The response body will contain a JSON object with properties `ok`, `id`, and `rev`.
  ```
  {
     "ok": true,
@@ -93,7 +93,7 @@ Delete an album from the collection of albums via `DELETE` to the `/albums/:id` 
   "type": "album"
 }
  ```
- When this is called, a successfully-updated item will result in a `200 - OK` response and the updated album will be returned in the response body.  A response body will include the `id` and `ok` properties, along with an updated `rev` property once the update is returned.
+ When this is called, a successfully-updated album will result in a `200 - OK` status.  A response body will include the `id` and `ok` properties, along with an updated `rev`.
 
 ```
  {
@@ -119,7 +119,7 @@ POST /artists
   "type": "artist"
 }
 ```
-When this is created, a successfully-created album will result in a `201 - Created` response and the album will be returned in the response body.  The response body will include `id` and `rev` properties:
+When this is created, a successfully-created artist will result in a `201 - Created` status.  The response body will include `id`, `rev`, and `ok` properties:
 
 ```
  {
@@ -134,7 +134,7 @@ Get an artist via `GET` from the `/artists/:id` route, passing in the ID.
 ```
 GET /artists/artist_manic-street-preachers
 ```
-When this is called, a successfully-found item will result in a `200 - OK` response and the album will be returned in the response body.  The response body will include the `_id` and `_rev` properties.
+When this is called, a successfully-found artist will result in a `200 - OK` status and the artist will be returned in the response body.  The response body will include the `_id` and `_rev` properties.
 
 ```
 {
@@ -153,7 +153,7 @@ When this is called, a successfully-found item will result in a `200 - OK` respo
 ```
  DELETE /artists/artists_manic-street-preachers
  ```
- When this is called, a successfully-deleted item will result in a `200 - OK` response. The response body will contain a JSON object with properties `ok`, `id`, and `rev`.
+ When this is called, a successfully-deleted artist will result in a `200 - OK` status. The response body will contain a JSON object with properties `ok`, `id`, and `rev`.
  ```
   {
     "ok": true,
@@ -181,7 +181,7 @@ When this is called, a successfully-found item will result in a `200 - OK` respo
   "type": "artist"
 }
  ```
- When this is called, a successfully-updated item will result in a `200 - OK` response and the updated artist will be returned in the response body.  A response body will include the `id` and `ok` properties, along with an updated `rev` property once the update is returned.
+ When this is called, a successfully-updated artist will result in a `200 - OK` status.  A response body will include the `id` and `ok` properties, along with an updated `rev` property.
 
 ```
  {
