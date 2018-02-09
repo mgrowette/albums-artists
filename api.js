@@ -7,7 +7,7 @@ const { propOr } = require('ramda')
 
 const port = process.env.PORT || 4000
 
-const { getAlbum } = require('./dal')
+const { getAlbum, getArtist } = require('./dal')
 
 app.get('/', (req, res) => res.send(`<h1>Welcome to the Music API</h1>`))
 
@@ -23,7 +23,13 @@ app.get('/albums/:id', (req, res, next) => {
 })
 
 app.get('/artists/:id', (req, res, next) => {
-  res.send(`You asked for ${req.params.id}`)
+  getArtist(req.params.id, function(err, artist) {
+    if (err) {
+      next(new HTTPError(err.status, err.message, err))
+      return
+    }
+    res.send(artist)
+  })
 })
 
 app.use(function(err, req, res, next) {

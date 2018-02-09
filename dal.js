@@ -6,5 +6,6 @@ PouchDB.plugin(require('pouchdb-find'))
 const db = new PouchDB(process.env.COUCHDB_URL)
 
 const getAlbum = (id, cb) => db.get(id, cb)
+const getArtist = (id, cb) => db.get(id, cb)
 
-module.exports = { getAlbum }
+module.exports = { getAlbum, getArtist }
