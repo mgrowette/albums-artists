@@ -30,6 +30,7 @@ POST /albums
 ```
 When this is created, a successfully-created album will result in a `201 - Created` response and the album will be returned in the response body.  The response body will include `_id` and `_rev` properties:
 ```
+{
   "_id": "album_send-away-the-tigers",
   "_rev": "1-aldk645shfa893258235hadf",
   "name": "Send Away the Tigers",
@@ -37,6 +38,7 @@ When this is created, a successfully-created album will result in a `201 - Creat
   "year": "2007",
   "artistId": "artist_manic-street-preachers",
   "type": "album"
+}
 ```
 
 ## Create an Artist
@@ -54,6 +56,7 @@ POST /artists
 ```
 When this is created, a successfully-created album will result in a `201 - Created` response and the album will be returned in the response body.  The response body will include `_id` and `_rev` properties:
 ```
+{
   "_id": "artist_manic-street-preachers",
   "_rev": "1-aldk645shfa893258235hadf",
    "name": "Manic Street Preachers",
@@ -61,4 +64,43 @@ When this is created, a successfully-created album will result in a `201 - Creat
   "founded": "1986",
   "description": "A Welsh rock band, formed in 1986 in Blackwood, Caerphilly and consisting of James Dean Bradfield (lead vocals, lead guitar), Nicky Wire (bass guitar, lyrics) and Sean Moore (drums, percussion, soundscapes). They are often colloquially known as the Manics.",
   "type": "artist"
+}
+```
+
+## Get an Album
+Get an album via `GET` from the `/albums/:id` route, passing in the ID.
+```
+GET /albums/album_send-away-the-tigers
+```
+When this is called, a successfully-found item will result in a `200 - OK` response and the album will be returned in the response body.  The response body will include the `_id` and `_rev` properties.
+
+```
+{
+  "_id": "album_send-away-the-tigers",
+  "_rev": "1-aldk645shfa893258235hadf",
+  "name": "Send Away the Tigers",
+  "genre": "rock",
+  "year": "2007",
+  "artistId": "artist_manic-street-preachers",
+  "type": "album"
+}
+```
+
+## Get an Artist
+Get an artist via `GET` from the `/artists/:id` route, passing in the ID.
+```
+GET /artists/artists_manic-street-preachers
+```
+When this is called, a successfully-found item will result in a `200 - OK` response and the album will be returned in the response body.  The response body will include the `_id` and `_rev` properties.
+
+```
+{
+  "_id": "artist_manic-street-preachers",
+  "_rev": "1-aldk645shfa893258235hadf",
+  "name": "Manic Street Preachers",
+  "country": "Wales",
+  "founded": "1986",
+  "description": "A Welsh rock band, formed in 1986 in Blackwood, Caerphilly and consisting of James Dean Bradfield (lead vocals, lead guitar), Nicky Wire (bass guitar, lyrics) and Sean Moore (drums, percussion, soundscapes). They are often colloquially known as the Manics.",
+  "type": "artist"
+}
 ```
