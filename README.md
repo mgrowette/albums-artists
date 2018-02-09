@@ -30,18 +30,16 @@ POST /albums
   "type": "album"
 }
 ```
-When this is created, a successfully-created album will result in a `201 - Created` response and the album will be returned in the response body.  The response body will include `_id` and `_rev` properties:
+When this is created, a successfully-created album will result in a `201 - Created` response and the album will be returned in the response body.  The response body will include `id` and `rev` properties:
 ```
-{
-  "_id": "album_send-away-the-tigers",
-  "_rev": "1-aldk645shfa893258235hadf",
-  "name": "Send Away the Tigers",
-  "genre": "rock",
-  "year": "2007",
-  "artistId": "artist_manic-street-preachers",
-  "type": "album"
-}
+ {
+    "ok": true,
+    "id": "album_send-away-the-tigers",
+    "rev": "1-lkik645shfa893258235hadf"
+ } 
 ```
+
+
 
 ## Get an Album
 Get an album via `GET` from the `/albums/:id` route, passing in the ID.
@@ -95,7 +93,7 @@ Delete an album from the collection of albums via `DELETE` to the `/albums/:id` 
   "type": "album"
 }
  ```
- When this is called, a successfully-updated item will result in a `200 - OK` response and the updated album will be returned in the response body.  A `type` property and an updated `_rev` will be added once the update is returned.
+ When this is called, a successfully-updated item will result in a `200 - OK` response and the updated album will be returned in the response body.  A response body will include the `id` and `ok` properties, along with an updated `rev` property once the update is returned.
 
 ```
  {
@@ -121,23 +119,20 @@ POST /artists
   "type": "artist"
 }
 ```
-When this is created, a successfully-created album will result in a `201 - Created` response and the album will be returned in the response body.  The response body will include `_id` and `_rev` properties:
+When this is created, a successfully-created album will result in a `201 - Created` response and the album will be returned in the response body.  The response body will include `id` and `rev` properties:
+
 ```
-{
-  "_id": "artist_manic-street-preachers",
-  "_rev": "1-lkik645shfa893258235hadf",
-   "name": "Manic Street Preachers",
-  "country": "Wales",
-  "founded": "1986",
-  "description": "A Welsh rock band, formed in 1986 in Blackwood, Caerphilly and consisting of James Dean Bradfield (lead vocals, lead guitar), Nicky Wire (bass guitar, lyrics) and Sean Moore (drums, percussion, soundscapes). They are often colloquially known as the Manics.",
-  "type": "artist"
-}
+ {
+    "ok": true,
+    "id": "artist_manic-street-preachers",
+    "rev": "1-lkik645shfa893258235hadf"
+ } 
 ```
 
 ## Get an Artist
 Get an artist via `GET` from the `/artists/:id` route, passing in the ID.
 ```
-GET /artists/artists_manic-street-preachers
+GET /artists/artist_manic-street-preachers
 ```
 When this is called, a successfully-found item will result in a `200 - OK` response and the album will be returned in the response body.  The response body will include the `_id` and `_rev` properties.
 
@@ -186,7 +181,7 @@ When this is called, a successfully-found item will result in a `200 - OK` respo
   "type": "artist"
 }
  ```
- When this is called, a successfully-updated item will result in a `200 - OK` response and the updated artist will be returned in the response body.  A `type` property and an updated `_rev` will be added once the update is returned.
+ When this is called, a successfully-updated item will result in a `200 - OK` response and the updated artist will be returned in the response body.  A response body will include the `id` and `ok` properties, along with an updated `rev` property once the update is returned.
 
 ```
  {
