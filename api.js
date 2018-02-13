@@ -7,9 +7,21 @@ const { propOr } = require('ramda')
 
 const port = process.env.PORT || 4000
 
-const { getAlbum, getArtist } = require('./dal')
+const { getAlbum, getArtist, getMusic } = require('./dal')
 
 app.get('/', (req, res) => res.send(`<h1>Welcome to the Music API</h1>`))
+
+//GET all the albums!
+app.get('/albums', (req, res, next) => {
+  const options = {
+    include_docs: true,
+    startkey: 'albums_',
+    endkey: 'albums_\ufff0'
+  }
+  getAlbum(options)
+    .then(docs => res.send(docs))
+    .catch(err => next(new HTTPError(err.status, err.message, err)))
+})
 
 app.get('/albums/:id', (req, res, next) => {
   //res.send(`You asked for ${req.params.id}`)

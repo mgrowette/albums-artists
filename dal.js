@@ -8,4 +8,7 @@ const db = new PouchDB(process.env.COUCHDB_URL)
 const getAlbum = (id, cb) => db.get(id, cb)
 const getArtist = (id, cb) => db.get(id, cb)
 
-module.exports = { getAlbum, getArtist }
+const getMusic = options =>
+  db.allDocs(options).then(result => pluck('doc', result.rows)) // plucks the 'doc' property in our 'result.rows' property in our database.  Could also use map.
+
+module.exports = { getAlbum, getArtist, getMusic }
